@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -37,7 +38,7 @@ public class Calculator {
                         System.exit(0);
                         break;
                     default:
-                        System.out.println("Invalid. Please select a choice.");
+                        System.out.println("Invalid! Please select a choice.");
                         break;
                 }
 
@@ -61,54 +62,97 @@ public class Calculator {
 
 
     private static void addition() {
-
-        int add1;
-        int add2;
-        int add3;
+        int add1, add2, add3, add4, add5, add6;
 
         Scanner adding = new Scanner(System.in);
-        add1 = adding.nextInt();
-        add2 = adding.nextInt();
 
-        add3 = add1 + add2;
+        try {
+            add1 = adding.nextInt();
+            add2 = adding.nextInt();
 
-        System.out.println("Sum of entered numbers is " + add3 + "\n");
-        System.out.println("Press Enter to continue");
+            add3 = add1 + add2;
 
-        Scanner keyboard = new Scanner(System.in);
-        keyboard.nextLine();
+            System.out.println("Sum of entered numbers is " + add3 + "\n");
 
+            System.out.println("Press Enter to continue");
 
-        System.out.println("******************** \n");
+            Scanner keyboard = new Scanner(System.in);
+            keyboard.nextLine();
 
-        menu();
+            System.out.println("******************** \n");
 
+            menu();
+
+        } catch (InputMismatchException ex) {
+            System.out.println("Invalid numbers!");
+            System.out.println("Please try again. Enter numbers only.");
+
+            Scanner number = new Scanner(System.in);
+
+            add4 = number.nextInt();
+            add5 = number.nextInt();
+
+            add6 = add4 + add5;
+
+            System.out.println("Sum of entered numbers is " + add6 + "\n");
+
+            System.out.println("Press Enter to continue");
+
+            Scanner keyboard = new Scanner(System.in);
+            keyboard.nextLine();
+
+            System.out.println("******************** \n");
+
+            menu();
+        }
 
     }
 
 
-
     private static void subtraction() {
-        int sub1;
-        int sub2;
-        int sub3;
+        int sub1, sub2, sub3, sub4, sub5, sub6;
 
         Scanner subtracting = new Scanner(System.in);
-        sub1 = subtracting.nextInt();
-        sub2 = subtracting.nextInt();
 
+        try {
+            sub1 = subtracting.nextInt();
+            sub2 = subtracting.nextInt();
 
-        sub3 = sub1 - sub2;
-        System.out.println("Sum of entered numbers is " + sub3 + "\n");
+            sub3 = sub1 - sub2;
 
-        System.out.println("Press Enter to continue");
+            System.out.println("Sum of entered numbers is " + sub3 + "\n");
 
-        Scanner keyboard = new Scanner(System.in);
-        keyboard.nextLine();
+            System.out.println("Press Enter to continue");
 
-        System.out.println("******************** \n");
+            Scanner keyboard = new Scanner(System.in);
+            keyboard.nextLine();
 
-        menu();
+            System.out.println("******************** \n");
+
+            menu();
+
+        } catch (InputMismatchException ex) {
+            System.out.println("Invalid numbers!");
+            System.out.println("Please try again. Enter numbers only.");
+
+            Scanner number = new Scanner(System.in);
+
+            sub4 = number.nextInt();
+            sub5 = number.nextInt();
+
+            sub6 = sub4 - sub5;
+
+            System.out.println("Sum of entered numbers is " + sub6 + "\n");
+
+            System.out.println("Press Enter to continue");
+
+            Scanner keyboard = new Scanner(System.in);
+            keyboard.nextLine();
+
+            System.out.println("******************** \n");
+
+            menu();
+        }
 
     }
 
@@ -116,51 +160,98 @@ public class Calculator {
 
 
     private static void multiplication() {
-        double mult1;
-        double mult2;
-        double mult3;
+        double mult1, mult2, mult3, mult4, mult5, mult6;
 
         Scanner multiplying = new Scanner(System.in);
-        mult1 = multiplying.nextInt();
-        mult2 = multiplying.nextInt();
 
-        mult3 = mult1 * mult2;
+        try {
+            mult1 = multiplying.nextInt();
+            mult2 = multiplying.nextInt();
 
-        System.out.println("Sum of entered numbers is " + mult3 + "\n");
+            mult3 = mult1 * mult2;
 
-        System.out.println("Press Enter to continue");
+            System.out.println("Sum of entered numbers is " + mult3 + "\n");
 
-        Scanner keyboard = new Scanner(System.in);
-        keyboard.nextLine();
+            System.out.println("Press Enter to continue");
 
-        System.out.println("******************** \n");
+            Scanner keyboard = new Scanner(System.in);
+            keyboard.nextLine();
 
-        menu();
+            System.out.println("******************** \n");
+
+            menu();
+
+        } catch (InputMismatchException ex) {
+            System.out.println("Invalid numbers!");
+            System.out.println("Please try again. Enter numbers only.");
+
+            Scanner number = new Scanner(System.in);
+
+            mult4 = number.nextFloat();
+            mult5 = number.nextFloat();
+
+            mult6 = mult4 * mult5;
+
+            System.out.println("Sum of entered numbers is " + mult6 + "\n");
+
+            System.out.println("Press Enter to continue");
+
+            Scanner keyboard = new Scanner(System.in);
+            keyboard.nextLine();
+
+            System.out.println("******************** \n");
+
+            menu();
+        }
 
     }
 
 
 
     private static void division() {
-        double div1;
-        double div2;
-        double div3;
+        double div1, div2, div3, div4, div5, div6;
 
         Scanner dividing = new Scanner(System.in);
-        div1 = dividing.nextInt();
-        div2 = dividing.nextInt();
 
-        div3 = div1 / div2;
+        try {
+            div1 = dividing.nextFloat();
+            div2 = dividing.nextFloat();
 
-        System.out.println("Sum of entered numbers is " + div3 + "\n");
-        System.out.println("Press Enter to continue");
+            div3 = div1 / div2;
 
-        Scanner keyboard = new Scanner(System.in);
-        keyboard.nextLine();
+            System.out.println("Sum of entered numbers is " + div3 + "\n");
 
-        System.out.println("******************** \n");
+            System.out.println("Press Enter to continue");
 
-        menu();
+            Scanner keyboard = new Scanner(System.in);
+            keyboard.nextLine();
+
+            System.out.println("******************** \n");
+
+            menu();
+
+        } catch (InputMismatchException ex) {
+            System.out.println("Invalid numbers!");
+            System.out.println("Please try again. Enter numbers only.");
+
+            Scanner number = new Scanner(System.in);
+
+            div4 = number.nextFloat();
+            div5 = number.nextFloat();
+
+            div6 = div4 / div5;
+
+            System.out.println("Sum of entered numbers is " + div6 + "\n");
+
+            System.out.println("Press Enter to continue");
+
+            Scanner keyboard = new Scanner(System.in);
+            keyboard.nextLine();
+
+            System.out.println("******************** \n");
+
+            menu();
+        }
 
     }
 
