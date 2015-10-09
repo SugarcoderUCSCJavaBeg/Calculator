@@ -52,7 +52,7 @@ public class Calculator {
         System.out.println("Please select a choice: \n" +
                 "1 - Addition\n" +
                 "2 - Subtraction\n" +
-                "3 = Multiplication \n" +
+                "3 - Multiplication \n" +
                 "4 - Division \n" +
                 "5 - Quit");
         }
@@ -73,6 +73,12 @@ public class Calculator {
         add3 = add1 + add2;
 
         System.out.println("Sum of entered numbers is " + add3 + "\n");
+        System.out.println("Press Enter to continue");
+
+        Scanner keyboard = new Scanner(System.in);
+        keyboard.nextLine();
+
+
         System.out.println("******************** \n");
 
         menu();
@@ -91,9 +97,15 @@ public class Calculator {
         sub1 = subtracting.nextInt();
         sub2 = subtracting.nextInt();
 
-        sub3 = sub1 - sub2;
 
+        sub3 = sub1 - sub2;
         System.out.println("Sum of entered numbers is " + sub3 + "\n");
+
+        System.out.println("Press Enter to continue");
+
+        Scanner keyboard = new Scanner(System.in);
+        keyboard.nextLine();
+
         System.out.println("******************** \n");
 
         menu();
@@ -115,6 +127,12 @@ public class Calculator {
         mult3 = mult1 * mult2;
 
         System.out.println("Sum of entered numbers is " + mult3 + "\n");
+
+        System.out.println("Press Enter to continue");
+
+        Scanner keyboard = new Scanner(System.in);
+        keyboard.nextLine();
+
         System.out.println("******************** \n");
 
         menu();
@@ -135,6 +153,12 @@ public class Calculator {
         div3 = div1 / div2;
 
         System.out.println("Sum of entered numbers is " + div3 + "\n");
+
+        System.out.println("Press Enter to continue");
+
+        Scanner keyboard = new Scanner(System.in);
+        keyboard.nextLine();
+
         System.out.println("******************** \n");
 
         menu();
