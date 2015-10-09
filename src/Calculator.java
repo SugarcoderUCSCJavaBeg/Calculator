@@ -153,7 +153,6 @@ public class Calculator {
         div3 = div1 / div2;
 
         System.out.println("Sum of entered numbers is " + div3 + "\n");
-
         System.out.println("Press Enter to continue");
 
         Scanner keyboard = new Scanner(System.in);
