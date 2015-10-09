@@ -9,53 +9,59 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
 
-
         menu();
 
+        boolean quit = false;
         Scanner selection = new Scanner(System.in);
 
+            while(!quit) {
+                switch (selection.nextInt()) {
+                    case 1:
+                        System.out.println("Please enter two numbers to add, separated by a space: ");
+                        addition();
+                        break;
+                    case 2:
+                        System.out.println("Please enter two numbers to subtract, separated by a space: ");
+                        subtraction();
+                        break;
+                    case 3:
+                        System.out.println("Please enter two floats to multiply, separated by a space: ");
+                        multiplication();
+                        break;
+                    case 4:
+                        System.out.println("Please enter two floats to divide, separated by a space: ");
+                        division();
+                        break;
+                    case 5:
+                        System.out.println("Thanks for using my calculator! The program will quit now.");
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Invalid. Please select a choice.");
+                        break;
+                }
 
-        switch (selection.nextInt()) {
-            case 1:
-                System.out.println("Please enter two numbers to add, separated by a space: ");
-                addition();
-                break;
-            case 2:
-                System.out.println("Please enter two numbers to subtract, separated by a space: ");
-                subtraction();
-                break;
-            case 3:
-                System.out.println("Please enter two floats to multiply, separated by a space: ");
-                multiplication();
-                break;
-            case 4:
-                System.out.println("Please enter two floats to divide, separated by a space: ");
-                division();
-                break;
-            case 5:
-                System.out.println("Thanks for using my calculator! The program will end now.");
-                break;
-            default:
-                System.out.println("Invalid. Please select a choice.");
-                break;
+            }
         }
 
-    }
 
 
     private static void menu() {
+
         System.out.println("Welcome to Miki's Handy Calculator!\n");
         System.out.println("Please select a choice: \n" +
                 "1 - Addition\n" +
                 "2 - Subtraction\n" +
                 "3 = Multiplication \n" +
                 "4 - Division \n" +
-                "5 - Exit");
-    }
+                "5 - Quit");
+        }
+
 
 
 
     private static void addition() {
+
         int add1;
         int add2;
         int add3;
@@ -65,11 +71,13 @@ public class Calculator {
         add2 = adding.nextInt();
 
         add3 = add1 + add2;
-        
+
         System.out.println("Sum of entered numbers is " + add3 + "\n");
         System.out.println("******************** \n");
 
         menu();
+
+
     }
 
 
@@ -89,6 +97,7 @@ public class Calculator {
         System.out.println("******************** \n");
 
         menu();
+
     }
 
 
@@ -109,6 +118,7 @@ public class Calculator {
         System.out.println("******************** \n");
 
         menu();
+
     }
 
 
@@ -128,10 +138,8 @@ public class Calculator {
         System.out.println("******************** \n");
 
         menu();
+
     }
-
-
-
 
 
 }
